@@ -1,12 +1,11 @@
 import React from "react"
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import { Form } from "react-bootstrap"
 
 export default function MyFooter(){ 
 return (
 <footer className="page-footer bg-gray font-small blue pt-4 mt-5 mb-0 px-5" fixed="bottom">
     <div className="container-fluid text-md-left mt-5 {theme === 'light' ? 'bg-light' : 'bg-dark'}">
-        <div className="row">
+        <div className="row d-flex">
             <div className="col-md-2 mb-md-0 mb-3 ps-0 ms-2">
                 <ul className="list-unstyled ps-0">
                     <li className=''>Informazioni</li>
@@ -42,16 +41,16 @@ return (
                     <li>Trasparenza sui contenuti consigliati</li>
                 </ul>
             </div>
-            <div className="col-md-2 mb-md-0 mb-3">
-                <DropdownButton className='col-md-4' id="dropdown-item-button" title="Italiano(Italiano)">
-                        <Dropdown.Item as="button">Action</Dropdown.Item>
-                        <Dropdown.Item as="button">Another action</Dropdown.Item>
-                        <Dropdown.Item as="button">Something else</Dropdown.Item>
-                </DropdownButton>
-                </div>
+            <div className="col-md-2 mb-md-0 mb-3 flex-grow-1">
+            <Form.Select aria-label="Default select example">
+                 <option>Italiano(Italiano)</option>
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+            </Form.Select>
+            </div>
         </div>
     </div>
-
     <div className="footer-copyright mt-3 pt-3 mb-0">LinkedIn Corporation © 2023
     </div>
 
