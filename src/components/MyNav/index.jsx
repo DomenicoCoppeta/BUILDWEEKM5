@@ -7,7 +7,7 @@ export default function MyNav() {
   // fetch per recuperare l'immagine del profilo
 
   return (
-    <Navbar expand="lg" className={cn(styles.FontSize, styles.BgWhite)}>
+    <Navbar expand="lg" sticky='top' className={cn(styles.FontSize, styles.BgWhite)}>
       <Container className={styles.Margin}>
         <Navbar.Brand href="#home">
           <img src={LogoImg} alt={LogoImg} className={styles.LogoImg} />
