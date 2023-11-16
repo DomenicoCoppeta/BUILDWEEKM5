@@ -4,15 +4,15 @@ import styles from './styles.module.scss'
 
 export default function AddExperience({ id, getAllExperience }) {
     const [text, setText] = useState('')
-    //aggiungere state per la data
+    const [date, setDate] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = {
             role: text,
             company: text,
-            startDate: Date,
-            endDate: Date,  //null se ancora in corso
+            startDate: date,
+            endDate: date,  //null se ancora in corso
             description: text,
             area: text,
         };
@@ -30,6 +30,7 @@ export default function AddExperience({ id, getAllExperience }) {
                 getAllExperience()
                 alert('Esperienza aggiunta con successo')
                 setText('')
+                setDate('')
             } else {
                 alert('Qualcosa è andato storto!')
             }
@@ -66,23 +67,23 @@ export default function AddExperience({ id, getAllExperience }) {
                         />
                     </Form.Group>
 
-                    {/* Data inizio DA CONTROLLARE COME SI INSERISCE LA DATA COL CALENDARIO*/}
+                    {/* Data inizio */}
                     <Form.Group className='mb-3' controlId="date">
                         <Form.Label>Data inizio:</Form.Label>
                         <Form.Control
                             type="date"
-                            value={date}
-                            onChange={(event) => setText(event.target.value)}
+                            placeholder='role'
+                            autoFocus
                         />
                     </Form.Group>
 
-                    {/* Data fine DA CONTROLLARE COME SI INSERISCE LA DATA COL CALENDARIO*/}
+                    {/* Data fine */}
                     <Form.Group className='mb-3' controlId="date">
                         <Form.Label>Data fine:</Form.Label>
                         <Form.Control
                             type="date"
-                            value={date}
-                            onChange={(event) => setText(event.target.value)}
+                            placeholder='role'
+                            autoFocus
                         />
                     </Form.Group>
 
