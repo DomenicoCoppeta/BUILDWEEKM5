@@ -9,12 +9,12 @@ export default function AddExperience({ id, getAllExperience }) {
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = {
-            role: text,
-            company: text,
-            startDate: date,
-            endDate: date,  //null se ancora in corso
-            description: text,
-            area: text,
+            role: '',
+            company: '',
+            startDate: '',
+            endDate: '',  //null se ancora in corso
+            description: '',
+            area: '',
         };
 
         fetch(`https://striveschool-api.herokuapp.com/api/profile/:${id}/experiences`, {
