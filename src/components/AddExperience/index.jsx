@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, Row, Col } from 'react-bootstrap'
+import { Form, Row, Col, Button } from 'react-bootstrap'
 import styles from './styles.module.scss'
 
 export default function AddExperience({ id, getAllExperience }) {
@@ -39,7 +39,7 @@ export default function AddExperience({ id, getAllExperience }) {
 
     return (
         <Row className='mt-4'>
-            <Col xs={12} md={6} className="m-auto">
+            <Col xs={12} className="m-auto">
                 <Form onSubmit={handleSubmit}>
                     <h3 className={styles.TextCenter}>
                         Inserisci un'esperienza lavorativa:
@@ -108,6 +108,9 @@ export default function AddExperience({ id, getAllExperience }) {
                             onChange={(event) => setText(event.target.value)}
                         />
                     </Form.Group>
+                    <Button className="rounded-2 py-3 w-100 btn-blue" type='submit'>
+                        Aggiungi esperienza
+                    </Button>
                 </Form>
             </Col>
         </Row>
