@@ -25,16 +25,11 @@ export default function Experiences({ userId, myId }) {
     return (
         <Container className={cn(styles.Exp, 'bg-white border rounded-3 p-3 mt-3')}>
             <Row className={cn(styles.Head, 'mb-5')}>
-                <Col xs={12} className='d-flex justify-content-between'>
+                <Col xs={12}>
                     <h3>Esperienze</h3>
                     {userId === myId && (
                         <>
                             <AddExperience userId={userId} show={show} setShow={setShow} />
-                            <Button onClick={() => setShow(true)}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-                                </svg>
-                            </Button>
                         </>
                     )}
                 </Col>
@@ -47,7 +42,6 @@ export default function Experiences({ userId, myId }) {
                     </Col>
                 ))}
             </Row>
-            <AddExperience userId={userId} show={show} setShow={setShow}/>
         </Container>
     )
 }

@@ -3,15 +3,15 @@ import { Row, Col, Button } from 'react-bootstrap'
 import AddExperience from '../AddExperience'
 import { useState } from 'react'
 
-export default function SingleExperience({ userId, myId, Experience }) {
+export default function SingleExperience({ userId, myId, Experience, getAllExperiences }) {
     const dataInizio = new Date(Experience.startDate)
     const dataFine = Experience.endDate === null ? new Date() : new Date(Experience.endDate)
     const [show, setShow] = useState(false)
 
     const deleteExperience = async (experienceId, userId) => {
         try {
-            fetch(
-                `https://striveschool-api.herokuapp.com/api/profile/:${_id}/experiences/:${exp_id}`,
+            let response = await fetch(
+                `https://striveschool-api.herokuapp.com/api/profile/:${userId}/experiences/:${experienceId}`,
                 {
                     headers: {
                         Authorization:
@@ -34,7 +34,7 @@ export default function SingleExperience({ userId, myId, Experience }) {
 
     return (
         <Row className='d-flex justify-content-between align-items-start mx-auto pt-2 my-1'>
-            <Col xs={10}>
+            <Col xs={12}>
                 <div className='d-flex justify-content-between mb-2'>
                     <p className='m-0 fw-bolder'>Ruolo:</p>
                     <p className='m-0 fw-bolder'>{Experience.role}</p>
