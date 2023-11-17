@@ -16,7 +16,8 @@ export default function MyProfile(){
             <div className={cn(styles.profileInfo, "p-3 rounded-bottom")}>
               <h4 className="mt-5 mb-1">Nome Cognome</h4>
               <h6>Qualifica Professionale</h6>
-              <p>Bologna, Emilia Romagna, Italia.<a href="#">Informazioni di contatto</a></p>
+              <p className={cn(styles.location)}>Bologna, Emilia Romagna, Italia - <a href="#">Informazioni di contatto</a></p>
+
               <Button variant='primary' className='rounded-pill me-2' size="sm">Disponibile per</Button>
               <Button variant='outline-primary' className='rounded-pill  me-2' size="sm">Aggiungi sezione del profilo</Button>
               <Button variant='outline-secondary' className='rounded-pill  me-2' size="sm">Altro</Button>
