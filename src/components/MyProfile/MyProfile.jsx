@@ -10,8 +10,8 @@ export default function MyProfile(){
         <Container className="container-fluid overflow-hidden relative ">
           <Row>
            <Col sm={8} className="d-flex flex-column overflow-hidden border rounded px-0"> 
-            <div className={cn(styles.profileCover, 'rounded-top overflow-hidden')}>
-              <Image src={Cover} fluid/>
+            <div className={cn(styles.profileCover, 'overflow-hidden')}>
+              <Image src={Cover} className='img-fluid'/>
             </div>
             <div className={cn(styles.profileInfo, "p-3 rounded-bottom")}>
               <h4 className="mt-5 mb-1">Nome Cognome</h4>
