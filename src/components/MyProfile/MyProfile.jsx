@@ -9,7 +9,7 @@ export default function MyProfile(){
     return (
         <Container className="container-fluid overflow-hidden relative ">
           <Row>
-           <Col sm={8} className="d-flex flex-column overflow-hidden border rounded px-0"> 
+           <Col sm={7} className="d-flex flex-column overflow-hidden border rounded px-0"> 
             <div className={cn(styles.profileCover, 'overflow-hidden')}>
               <Image src={Cover} className='img-fluid'/>
             </div>
