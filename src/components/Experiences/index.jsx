@@ -24,8 +24,8 @@ export default function Experiences({ userId, myId }) {
 
     return (
         <Container className={cn(styles.Exp, 'bg-white border rounded-3 p-3 mt-3')}>
-            <Row className={cn(styles.Head, 'mb-5')}>
-                <Col xs={12}>
+            <Row xs={8} className={cn(styles.Head, 'mb-5')}>
+                <Col>
                     <h3>Esperienze</h3>
                     {userId === myId && (
                         <>
